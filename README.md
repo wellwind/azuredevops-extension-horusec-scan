@@ -1,6 +1,8 @@
 Horusec Scan Task
 ===
 
+[English Doc](https://github.com/wellwind/azuredevops-extension-horusec-scan/blob/main/README.md) | [中文說明](https://github.com/wellwind/azuredevops-extension-horusec-scan/blob/main/README.zh-TW.md)
+
 Add the [Horusec](https://horusec.io/site/) scan results to the pipeline. Horusec is an open source tool that performs static code analysis to identify security flaws.
 
 Agent Pool
