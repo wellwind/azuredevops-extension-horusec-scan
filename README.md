@@ -32,6 +32,7 @@ jobs:
         - task: MikeHuang.horusec-scan-task.horusec-scan-task.herusec-scan@0
           displayName: 'Horusec Scan Scan: $(Build.SourcesDirectory)'
           inputs:
+            projectPath: '$(Build.SourcesDirectory)'
             sarifReportPath: '$(Build.ArtifactStagingDirectory)/horusec-report.sarif'
             sarifPathConvert: true
         - task: PublishBuildArtifacts@1
