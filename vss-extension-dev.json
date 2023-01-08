@@ -1,0 +1,64 @@
+{
+  "manifestVersion": 1,
+  "id": "horusec-scan-task-dev",
+  "name": "Horusec Scan Task (dev)",
+  "version": "0.0.12",
+  "publisher": "MikeHuang",
+  "public": false,
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "homepage": "https://github.com/wellwind/azuredevops-extension-horusec-scan",
+  "description": "Add Horusec scan for static code analysis. Horusec is an open source tool for static code analysis.",
+  "categories": ["Azure Pipelines"],
+  "icons": {
+    "default": "icon.png"
+  },
+  "content": {
+    "details": {
+      "path": "README.md"
+    }
+  },
+  "files": [
+    {
+      "path": "buildandreleasetask"
+    },
+    {
+      "path": "images/mutiple-agent-job.png",
+      "addressable": true
+    },
+    {
+      "path": "images/task-report-setting.png",
+      "addressable": true
+    },
+    {
+      "path": "images/publish-code-analysis-logs.png",
+      "addressable": true
+    },
+    {
+      "path": "images/horusec-scan-result.png",
+      "addressable": true
+    }
+  ],
+  "links": {
+    "home": {
+      "uri": "https://github.com/wellwind/azuredevops-extension-horusec-scan"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/wellwind/azuredevops-extension-horusec-scan"
+  },
+  "contributions": [
+    {
+      "id": "horusec-scan-task",
+      "type": "ms.vss-distributed-task.task",
+      "targets": ["ms.vss-distributed-task.tasks"],
+      "properties": {
+        "name": "buildandreleasetask"
+      }
+    }
+  ]
+}

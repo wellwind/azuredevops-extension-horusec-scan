@@ -1,0 +1,35 @@
+{
+  "name": "azuredevops-extension-horusec-scan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node buildandreleasetask/index.js",
+    "build": "npx webpack --config webpack.config.js",
+    "pack:dev": "npm run build && tfx extension create --manifest-globs vss-extension-dev.json --rev-version --output-path ./dist/dev",
+    "pack:prod": "npm run build && tfx extension create --manifest-globs vss-extension.json --rev-version --output-path ./dist/prod"
+  },
+  "keywords": [],
+  "author": "Mike Huang <wellwind@gmail.com>",
+  "homepage": "https://github.com/wellwind/azuredevops-extension-horusec-scan",
+  "bugs": {
+    "url": "https://github.com/wellwind/azuredevops-extension-horusec-scan/issues"
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/wellwind/azuredevops-extension-horusec-scan"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.11.18",
+    "@types/q": "^1.5.5",
+    "sync-request": "^6.1.0",
+    "ts-loader": "^9.4.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
